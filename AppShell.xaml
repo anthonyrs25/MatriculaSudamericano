@@ -3,12 +3,16 @@
     x:Class="MatriculaSudamericano.AppShell"
     xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
     xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-    xmlns:local="clr-namespace:MatriculaSudamericano"
-    Title="MatriculaSudamericano">
+    xmlns:views="clr-namespace:MatriculaSudamericano.Views"
+    Shell.FlyoutBehavior="Disabled"
+    Shell.NavBarIsVisible="False"
+    Title="Matrícula Sudamericano">
 
-    <ShellContent
-        Title="Home"
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage" />
+    <ShellContent Title="Iniciar sesión"
+                  ContentTemplate="{DataTemplate views:LoginPage}"
+                  Route="LoginPage" />
 
+    <ShellContent Title="Matrícula"
+                  ContentTemplate="{DataTemplate views:MatriculaPage}"
+                  Route="MatriculaPage" />
 </Shell>

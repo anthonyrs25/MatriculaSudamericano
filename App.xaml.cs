@@ -1,17 +1,15 @@
-﻿using Microsoft.Extensions.DependencyInjection;
+﻿namespace MatriculaSudamericano;
 
-namespace MatriculaSudamericano
+public partial class App : Application
 {
-    public partial class App : Application
+    public App()
     {
-        public App()
-        {
-            InitializeComponent();
-        }
+        InitializeComponent();
+        UserAppTheme = AppTheme.Light;
+    }
 
-        protected override Window CreateWindow(IActivationState? activationState)
-        {
-            return new Window(new AppShell());
-        }
+    protected override Window CreateWindow(IActivationState? activationState)
+    {
+        return new Window(new AppShell()) { Title = "Matrícula Sudamericano" };
     }
 }
